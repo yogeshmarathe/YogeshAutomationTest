@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.ITestListener;
+import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -16,6 +17,7 @@ public class LoginPageTest extends BaseTest implements ITestListener {
 	
 	@Test
 	public void loginTest()  throws IOException, InterruptedException {
+//		Reporter.log("Report for the Login test");
 		
 		driver.findElement(By.xpath(locatorfile.getProperty("Username"))).sendKeys("MaratheYogesh");
 		Thread.sleep(1000);

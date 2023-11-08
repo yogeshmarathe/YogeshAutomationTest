@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Test failed for the methhod : loginTest]]>
+    </line>
+    <line>
+      <![CDATA[Test failed for the methhod : org.testng.TestRunner@61d01788]]>
+    </line>
   </reporter-output>
-  <suite started-at="2023-11-08T13:09:16 IST" name="Default suite" finished-at="2023-11-08T13:09:25 IST" duration-ms="9519">
+  <suite started-at="2023-11-08T14:41:50 IST" name="Default suite" finished-at="2023-11-08T14:41:58 IST" duration-ms="8134">
     <groups>
     </groups>
-    <test started-at="2023-11-08T13:09:16 IST" name="Default test" finished-at="2023-11-08T13:09:25 IST" duration-ms="9519">
+    <test started-at="2023-11-08T14:41:50 IST" name="Default test" finished-at="2023-11-08T14:41:58 IST" duration-ms="8134">
       <class name="testcases.LoginPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginPageTest@6025e1b6]" started-at="2023-11-08T13:09:16 IST" name="setup" finished-at="2023-11-08T13:09:20 IST" duration-ms="3856" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginPageTest@6025e1b6]" started-at="2023-11-08T14:41:50 IST" name="setup" finished-at="2023-11-08T14:41:53 IST" duration-ms="3102" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTest()[pri:0, instance:testcases.LoginPageTest@6025e1b6]" started-at="2023-11-08T13:09:20 IST" name="loginTest" finished-at="2023-11-08T13:09:25 IST" duration-ms="5369" status="FAIL">
+        <test-method signature="loginTest()[pri:0, instance:testcases.LoginPageTest@6025e1b6]" started-at="2023-11-08T14:41:53 IST" name="loginTest" finished-at="2023-11-08T14:41:57 IST" duration-ms="4771" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [https://parabank.parasoft.com/parabank/login.htm] but found [https://parabank.parasoft.com/parabank/overview.htm]]]>
@@ -24,7 +30,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at testcases.LoginPageTest.loginTest(LoginPageTest.java:28)
+at testcases.LoginPageTest.loginTest(LoginPageTest.java:30)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -55,9 +61,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[Test failed for the methhod : loginTest]]>
+            </line>
+            <line>
+              <![CDATA[Test failed for the methhod : org.testng.TestRunner@61d01788]]>
+            </line>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.LoginPageTest@6025e1b6]" started-at="2023-11-08T13:09:25 IST" name="teardown" finished-at="2023-11-08T13:09:25 IST" duration-ms="88" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.LoginPageTest@6025e1b6]" started-at="2023-11-08T14:41:58 IST" name="teardown" finished-at="2023-11-08T14:41:58 IST" duration-ms="77" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
