@@ -19,7 +19,7 @@ public class ScreenshotCapture extends BaseTest{
 		
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File scrfile =  ts.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrfile, new File("C:\\Users\\YogeshMarathe\\git\\parabankautomation\\screenshot\\" + screenshotfilename + ".png"));
+		FileUtils.copyFile(scrfile, new File("C:\\Users\\YogeshMarathe\\parabankautomation\\screenshot\\" + screenshotfilename + ".png"));
 //		FileUtils.copyFile(scrfile, new File("./screenshot/")+ screenshotfilename + ".png");
 	}
 
