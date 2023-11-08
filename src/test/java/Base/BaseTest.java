@@ -35,7 +35,7 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get(configfile.getProperty("testurl"));
-		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			
 		
 	}
