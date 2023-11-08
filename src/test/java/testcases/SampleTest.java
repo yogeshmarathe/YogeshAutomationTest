@@ -1,6 +1,7 @@
 package testcases;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +17,7 @@ public class SampleTest {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get("https://parabank.parasoft.com/parabank/index.htm");
-		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("MaratheYogesh");
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Yogesh@123");

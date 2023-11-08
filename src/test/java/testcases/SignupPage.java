@@ -1,6 +1,7 @@
 package testcases;
 
 import org.openqa.selenium.By;
+import org.testng.ITestListener;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -10,7 +11,7 @@ import utilities.ReadExcelData;
 
 @Listeners(Listener.class)
 
-public class SignupPage extends BaseTest {
+public class SignupPage extends BaseTest implements ITestListener{
 	
 	@Test(dataProviderClass=ReadExcelData.class,dataProvider="Signupdata")
 	public void SignupTest(String FirstName,String LastName, String Address, String City, String State, String ZipCode, String Phone, String SSN, String UsernameSignup, String PasswordSignup, String ConfirmPassword  ) throws InterruptedException {

@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,9 +19,7 @@ public class BaseTest {
 	public static FileReader config;
 	public static Properties locatorfile = new Properties();
 	public static FileReader loc;
-	
-	
-	@SuppressWarnings("deprecation")
+		
 	@BeforeTest
 	public void setup() throws IOException {
 		
