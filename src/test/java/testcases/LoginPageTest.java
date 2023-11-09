@@ -10,22 +10,26 @@ import org.testng.annotations.Test;
 
 import Base.BaseTest;
 import utilities.Listener;
+import utilities.ReadExcelData;
 
 @Listeners(Listener.class)
 
 public class LoginPageTest extends BaseTest implements ITestListener {
 	
-	@Test
-	public void loginTest()  throws IOException, InterruptedException {
+	@Test(dataProviderClass=ReadExcelData.class,dataProvider="SignIndata")
+	public void loginTest(String LoginId, String Password)  throws IOException, InterruptedException {
 //		Reporter.log("Report for the Login test");
-		
-		driver.findElement(By.xpath(locatorfile.getProperty("Username"))).sendKeys("MaratheYogesh");
+		driver.findElement(By.xpath(locatorfile.getProperty("Username"))).clear();
 		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("Password"))).sendKeys("Yogesh@123");
+		driver.findElement(By.xpath(locatorfile.getProperty("Username"))).sendKeys(LoginId);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("LoginBtn"))).click();
+		driver.findElement(By.xpath(locatorfile.getProperty("Password"))).clear();
 		Thread.sleep(1000);
-		String acturl = "https://parabank.parasoft.com/parabank/overview.htm";
+		driver.findElement(By.xpath(locatorfile.getProperty("Password"))).sendKeys(Password);
+		Thread.sleep(1000);
+		driver.findElement(By.xpath(locatorfile.getProperty("SignInBtn"))).click();
+		Thread.sleep(1000);
+		String acturl = "https://rise.fairsketch.com/dashboard/index/1";
 		String Expurl = driver.getCurrentUrl();
 		Assert.assertEquals(acturl, Expurl);
 		}

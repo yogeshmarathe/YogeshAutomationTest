@@ -19,6 +19,8 @@ public class BaseTest {
 	public static FileReader config;
 	public static Properties locatorfile = new Properties();
 	public static FileReader loc;
+	public static Properties datafile = new Properties();
+	public static FileReader data;
 		
 	@BeforeTest
 	public void setup() throws IOException {
@@ -27,13 +29,15 @@ public class BaseTest {
 		configfile.load(config);
 		loc = new FileReader(System.getProperty("user.dir")+"\\src\\test\\resources\\configfiles\\locators.properties");
 		locatorfile.load(loc);
+		data = new FileReader(System.getProperty("user.dir")+"\\src\\test\\resources\\configfiles\\data.properties");
+		datafile.load(data);
 		
 		System.out.println(configfile.getProperty("browser"));
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get(configfile.getProperty("testurl"));
+		driver.get(configfile.getProperty("URL_CRM"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			
 		

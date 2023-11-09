@@ -13,34 +13,32 @@ import utilities.ReadExcelData;
 
 public class SignupPage extends BaseTest implements ITestListener{
 	
+//	@Test(dataProviderClass=ReadExcelData.class,dataProvider="Signupdata")
 	@Test(dataProviderClass=ReadExcelData.class,dataProvider="Signupdata")
-	public void SignupTest(String FirstName,String LastName, String Address, String City, String State, String ZipCode, String Phone, String SSN, String UsernameSignup, String PasswordSignup, String ConfirmPassword  ) throws InterruptedException {
-		driver.findElement(By.xpath(locatorfile.getProperty("registerbtn1"))).click();
-		Thread.sleep(1000);
+	public void SignupTest(String FirstName,String LastName, String ComapanyName, String email, String Password, String RetypePassword  ) throws InterruptedException {
+		
+
+//	public void SignupTest(String FirstName,String LastName) throws InterruptedException {
+		
+		driver.findElement(By.xpath(locatorfile.getProperty("Signupbtn1"))).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath(locatorfile.getProperty("FirstNametab"))).sendKeys(FirstName);
 		Thread.sleep(1000);
 		driver.findElement(By.xpath(locatorfile.getProperty("LastNametab"))).sendKeys(LastName);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("Addresstab"))).sendKeys(Address);
+//		driver.findElement(By.xpath(locatorfile.getProperty("Typeradiobtn"))).click();
+//		Thread.sleep(1000);
+		driver.findElement(By.xpath(locatorfile.getProperty("CompanyNameTab"))).sendKeys(ComapanyName);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("Citytab"))).sendKeys(City);
+		driver.findElement(By.xpath(locatorfile.getProperty("emailTab"))).sendKeys(email);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("Statetab"))).sendKeys(State);
+		driver.findElement(By.xpath(locatorfile.getProperty("Passwordtab"))).sendKeys(Password);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("ZipCodetab"))).sendKeys(ZipCode);
+		driver.findElement(By.xpath(locatorfile.getProperty("RetypePasswordtab"))).sendKeys(RetypePassword);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("Phonetab"))).sendKeys(Phone);
+		driver.findElement(By.xpath(locatorfile.getProperty("Signupbtn2"))).click();
 		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("SSNtab"))).sendKeys(SSN);
-		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("UsernameSignuptab"))).sendKeys(UsernameSignup);
-		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("PasswordSignuptab"))).sendKeys(PasswordSignup);
-		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("ConfirmPasswordtab"))).sendKeys(ConfirmPassword);
-		Thread.sleep(1000);
-		driver.findElement(By.xpath(locatorfile.getProperty("Registerbtn2"))).click();
-		Thread.sleep(1000);
+//		
 	}
 
 }
